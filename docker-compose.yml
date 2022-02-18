@@ -6,8 +6,6 @@ services:
       dockerfile: nginx.dockerfile
     ports:
       - 80:80
-    volumes:
-      - ./frontend:/var/www/html
     depends_on:
       - frontend
       - backend
