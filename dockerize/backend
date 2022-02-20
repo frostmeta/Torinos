@@ -3,8 +3,8 @@ FROM php:8-fpm-alpine
 RUN apk add --no-cache $PHPIZE_DEPS oniguruma-dev libzip-dev curl-dev \
     && docker-php-ext-install pdo_mysql mbstring zip curl
 
-RUN pecl install xdebug-3.1.3 redis-5.3.7 \
-    && docker-php-ext-enable xdebug redis
+#RUN pecl install xdebug-3.1.3 redis-5.3.7 \
+    #&& docker-php-ext-enable xdebug redis
 
 RUN mkdir /app
 
